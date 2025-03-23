@@ -27,9 +27,8 @@ if not cap.isOpened():
     exit()
 
 # Параметры обработки
-input_size = 320  # Уменьшение разрешения
+input_size = 180  # Уменьшение разрешения
 prev_time = time.time()
-
 
 while True:
     ret, frame = cap.read()
@@ -53,9 +52,8 @@ while True:
 
     # Вывод статистики производительности
     print(f"Текущий FPS: {round(inference_time)}")
-    print("-" * 60)
+    print("-" * 80)
 
-
-
+# Высвобождение ресурсов
 cap.release()
 cv2.destroyAllWindows()
